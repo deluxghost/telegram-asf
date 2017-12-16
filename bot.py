@@ -2,7 +2,7 @@
 
 token = '123456789:XXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXX'
 admin = '987654321'
-ipc = 'http://127.0.0.1:1242/IPC?command='
+ipc = 'http://127.0.0.1:1242/Api/Command/'
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Job
 import urllib.parse as parse, urllib.request as request, urllib.error
