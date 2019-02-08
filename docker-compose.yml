@@ -1,0 +1,23 @@
+version: "3"
+services:
+  asf:
+    image: justarchi/archisteamfarm
+    restart: always
+    networks:
+      - asf
+    ports:
+      - "127.0.0.1:1242:1242"
+    volumes:
+      - /home/asf:/app/config
+
+  simple-asf:
+    build: .
+    image: simple-asf/simple-asf
+    restart: always
+    networks:
+      - asf
+    depends_on:
+      - asf
+
+networks:
+  asf:
